@@ -1,0 +1,534 @@
+body {
+	margin: 0;
+	padding: 0;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: #fff100;
+	background-size: cover;
+}
+
+.headline {
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+
+.headline h1 {
+	font-size: 4.6em;
+	font-family: 'Oleo Script', cursive;
+	color: #fff;
+	height: 25px;
+	display: inline-block;
+	animation: mymove 1s;
+	transform: rotate(-10deg);
+	position: relative;
+	top: 0;
+	text-shadow: 2px 2px #999;
+}
+
+@-webkit-keyframes mymove
+{
+    0%   {top: 5em; transform: rotate(-10deg);}
+    90% {transform: rotate(-350deg); font-size: 6em;}
+    100% {transform: rotate(-360deg);}
+}
+
+@keyframes mymove
+{
+    0%   {top: 5em; transform: rotate(-10deg);}
+    90% {transform: rotate(-350deg); font-size: 6em;}
+    100% {transform: rotate(-360deg);}
+}
+
+.headline h2:after {
+	content: url(../image/lower-sun.png);
+	font-size: 0;
+	line-height: 0;
+	position: relative;
+}
+
+.headline h2{
+	font-size: 2.4em;
+	font-family: 'oleo Script', cursive;
+	color: #555;
+    padding-top: 0.5em;
+    transform: rotate(-10deg);
+    position: relative;
+    animation: anothermove 1s;
+}
+
+@-webkit-keyframes anothermove
+{
+	0%   {top: 10em; opacity: 0; transform: rotate(-10deg);}
+	50%   {top: 0em; opacity: 0.5; transform: rotate(-10deg);}
+    100%  {opacity: 1; transform: rotate(-10deg);}
+}
+
+@keyframes anothermove
+{
+	0%   {top: 10em; opacity: 0; transform: rotate(-10deg);}
+	50%   {top: 0em; opacity: 0.5; transform: rotate(-10deg);}
+    100%  {opacity: 1; transform: rotate(-10deg);}
+}
+
+.bubble {
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 0 auto;
+	margin: 0 auto;
+	position: absolute;
+	top: 18em;
+	left: -11.9em;
+	opacity: 0;
+	-webkit-animation: swing 0.5s ease;
+	animation: swing 0.5s ease; 
+	-webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.bubble img {
+	width: 12em;
+}
+
+.text {
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	font-size: 1.8em;
+	font-family: 'Oleo Script', cursive;
+	color: rgb(55, 55, 55);
+	letter-spacing: 0.06em;
+	position: absolute;
+	top: 8.5em;
+	left: -5.5em;
+	z-index: 3333333;
+	-webkit-animation: swing 0.7s ease;
+	animation: swing 0.7s ease; 
+	-webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes swing
+{
+    50%
+    {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0px);
+       transform: translateX(0px);
+    } 
+}
+
+@keyframes swing
+{
+    50%
+    {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0px);
+       transform: translateX(0px);
+    } 
+}
+
+#alter {
+	font-size: 1.4em;
+	padding-top: 1em;
+}
+
+#inner-text img {
+	width: 1.5em;
+	cursor: pointer;
+}
+
+.decor {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 0 auto;
+	margin: 0 auto;
+	z-index: 222222222;
+}
+
+.bling,
+.bling2,
+.bling3,
+.bling4 {
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 0 auto;
+	margin: 0 auto;
+	z-index: 222222222;
+	position: absolute;
+}
+
+.bling {
+	top: 21.5em;
+	left: 5.5em;
+	-webkit-animation: swin 0.4s ease;
+	animation: swin 0.4s ease; 
+	-webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes swin
+{
+    50%
+    {
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
+    }
+    100%
+    {
+        -webkit-transform: translateY(0px);
+       transform: translateY(0px);
+    } 
+}
+
+@keyframes swin
+{
+    50%
+    {
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
+    }
+    100%
+    {
+        -webkit-transform: translateY(0px);
+       transform: translateY(0px);
+    } 
+}
+
+.bling img {
+	width: 5em;
+}
+
+.bling2 {
+	top: 21.8em;
+	right: 4.6em;
+	-webkit-animation: swi 0.4s ease;
+	animation: swi 0.4s ease; 
+	-webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes swi
+{
+    50%
+    {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+    100%
+    {
+        -webkit-transform: translateY(0px);
+       transform: translateY(0px);
+    } 
+}
+
+@keyframes swi
+{
+    50%
+    {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+    100%
+    {
+        -webkit-transform: translateY(0px);
+       transform: translateY(0px);
+    } 
+}
+
+.bling2 img {
+	width: 5.5em;
+}
+
+.bling3 {
+	top: 17.5em;
+	left: 1.5em;
+	-webkit-animation: swi 0.4s ease;
+	animation: swi 0.4s ease; 
+	-webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.bling3 img {
+	width: 4.5em;
+}
+
+.bling4 {
+	top: 19.8em;
+	right: 3.5em;
+	-webkit-animation: swin 0.4s ease;
+	animation: swin 0.4s ease; 
+	-webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.bling4 img {
+	width: 1.2em;
+}
+
+.main {
+	width: 100%;
+	padding-top: 14.8em;
+}
+
+.toast {
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 0 auto;
+	margin: 0 auto;
+	position: relative;
+	top: 10em;
+	left: -0.5em;
+	z-index: 11;
+}
+.jump {
+	-webkit-animation: action 0.8s ease-in-out;
+	animation: action 0.8s ease-in-out; 
+	-webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    animation-delay: 0.6s;
+}
+
+@-webkit-keyframes action {
+    10%
+    {
+        -webkit-transform: translateY(1.2em);
+        transform: translateY(1.2em);
+    }
+    50%
+    {
+        -webkit-transform: translateY(-12em);
+       transform: translateY(-12em);
+    } 
+    100%
+    {
+        -webkit-transform: translateY(0em);
+       transform: translateY(0em);
+    } 
+}
+
+@keyframes action {
+    10%
+    {
+        -webkit-transform: translateY(1.2em);
+        transform: translateY(1.2em);
+    } 
+    50%
+    {
+        -webkit-transform: translateY(-12em);
+       transform: translateY(-12em);
+    } 
+    100%
+    {
+        -webkit-transform: translateY(0em);
+       transform: translateY(0em);
+    } 
+}
+
+.toast img {
+	width: 11em;
+}
+
+.toaster {
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 0 auto;
+	margin: 0 auto;
+	position: relative;
+	z-index: 111111;
+}
+
+.toaster img {
+	width: 14.5em;
+}
+
+.handle {
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 0 auto;
+	margin: 0 auto;
+	position: relative;
+	top: -5.2em;
+	left: 5.3em;
+	z-index: 1111111;
+	transition: 0.1s ease-out;
+	float: left;
+}
+.slide{
+	top: -9.2em;
+	left: 5.8em;
+}
+
+.handle img {
+	width: 2.6em;
+	cursor: pointer;
+}
+
+#arrow {
+	position: absolute;
+	top: -0.5em;
+	animation: colorchange 0.8s infinite;
+}
+
+@keyframes colorchange {
+	50% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-webkit-keyframes colorchange {
+	50% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+/*Style for the pop-up screen*/
+.mrtoast {
+	position: absolute;
+	top: 0;
+	z-index: 3333333;
+	width: 100%;
+	padding-top: 15em;
+}
+
+.toast2 {
+	text-align: center;
+	position: relative;
+	left: 9em;
+}
+
+.toast-img {
+	display: inline-block;
+}
+
+.mrtoast img {
+	width: 13.2em;
+}
+
+.choices{
+	display: inline-block;
+	position: relative;
+	top: 3.5em;
+	width: 15em;
+	margin-left: 2em;
+}
+
+.choices h2{
+	font-family: 'oleo Script', cursive;
+	font-size: 1.8em;
+	color: #ef4136;
+	padding-bottom: 1em;
+	padding-top: 1em;
+	border-radius: 15px 15px;
+	border-style: dotted;
+	border-color: #ef4136;
+	border-width: 2.5px;
+}
+
+.choices li{
+	font-family: 'raleway', sans-serif;
+	font-weight: bold;
+	font-size: 1em;
+	letter-spacing: 0.9px;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background: linear-gradient(36deg, rgba(255, 255, 255, 1) 22%, rgba(232, 232, 232, 1) 100%);
+	color: #555;
+	width: 100%;
+	cursor: pointer;
+	border-radius: 2px 2px;
+	border: 0.9px #eee solid;
+	margin: 0.6em auto;
+}
+
+#dressing-choices img{
+	width: 2.5em;
+	position: absolute;
+	animation: colorchange 0.8s infinite;
+	cursor: pointer;
+}
+
+/*---Adding toppings to Mr. Toast---*/
+
+.toast3 {
+	text-align: center;
+}
+
+.topping-img {
+	text-align: center;
+	position: relative;
+}
+
+#tomato,
+#banana,
+#egg {
+	width: 9em;
+	position: relative;
+}
+
+#tomato {
+	left: 9em;
+	top: -1em;
+}
+
+#banana {
+	left: 1.5em;
+	top: -3.5em;
+}
+
+#egg {
+	left: -5em;
+	top: -2em;
+}
+
+#topping-choices {
+	position: relative;
+	top: -8.1em;
+	right: -15.8em;
+}
+
+#topping-choices p {
+	font-family: 'lato', sans-serif;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	color: #fff;
+	padding: 0.8em;
+	animation: appear 1s; 
+	opacity: 1;
+}
+
+@keyframes appear {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-webkit-keyframes appear {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+#topping-choices h3 {
+	font-family: 'oleo Script', cursive;
+	font-size: 1.4em;
+	color: #555;
+	cursor: pointer;
+	text-decoration: underline;
+	animation: swing 0.5s infinite;
+}
