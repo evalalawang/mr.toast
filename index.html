@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A day started with Mr. Toast</title>
+	<meta charset="utf-8">
+	<meta lang="en">
+	<meta name="author" content="Yifan Wang">
+	<meta name="description" content="This is a little game for giving you a little chuckle to start your day!">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Oleo+Script|Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<embed src="Lobby Time.mp3" autostart="true" loop="true"
+	width="0" height="0">
+	</embed>
+	<noembed>
+		<bgsound src="Lobby Time.mp3" loop="infinite">
+	</noembed>
+
+	<div class="headline">
+		<h1>A Good Morning</h1>
+		<h2>with Mr. Toast&nbsp;</h2>
+	</div>
+
+	<div id="screen1">
+		<div class="bubble">
+			<img src="image/bubble.png">
+		</div>
+
+		<div class="text" id="inner-text">
+			<h1>Zzzzz...</h1>
+		</div>
+
+		<div class="decor">
+			<div class="bling">
+				<img src="image/bling.png">
+			</div>
+
+			<div class="bling2">
+				<img src="image/bling2.png">
+			</div>
+
+			<div class="bling3">
+				<img src="image/bling3.png">
+			</div>
+
+			<div class="bling4">
+				<img src="image/bling4.png">
+			</div>
+		</div>
+	</div>
+
+	
+
+	<div class="main">
+		<div class="toast" id="jumping-toast">
+			<img src="image/toast.png">
+		</div>
+
+		<div class="toaster">
+			<img src="image/toaster.png">
+		</div>
+
+		<div class="handle" id="bar">
+			<img src="image/handle.png" onclick="myFunction()">
+			<img src="image/arrow-2.png" id="arrow">
+		</div>
+	</div>
+
+	<!--The start of the pop-up screen-->
+	<div class="mrtoast" id="screen2">
+		<div class="toast2">
+			<div class="toast-img" id="smile-toast">
+				<img src="image/toast.png">
+			</div>
+			<div class="choices" id="dressing-choices">
+				<div class="dressing">
+					<h2>Dressing</h2>
+					<ul>
+						<li onclick="avo()">Avocado spread</li>
+						<li onclick="peanut()">Peanut butter</li>
+						<li onclick="cheese()">Cheese slice</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+	<!--The start of the last pop-up screen-->
+	<div class="mrtoast" id="screen3">
+		<div class="toast3">
+			<div class="topping-img">
+				<img src="image/tomato.png" id="tomato">
+				<img src="image/banana.png" id="banana">
+				<img src="image/egg.png" id="egg">
+			</div>
+			<div class="choices" id="topping-choices">
+				<div class="topping">
+					<h2>Topping</h2>
+					<ul>
+						<li onclick="tomato()">Tomato</li>
+						<li onclick="banana()">Banana</li>
+						<li onclick="egg()">Egg</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+
+	<script>
+		document.getElementById('screen2').style.top = '-200em';
+		document.getElementById('screen3').style.top = '-200em';
+
+		function myFunction(){
+			$("#bar").addClass('slide');
+			document.getElementById('arrow').style.display = 'none';
+			$('.bubble').css('opacity','1');
+			var el = document.getElementById('inner-text');
+			el.innerHTML = '<h1 id="alter">Morning!</h1>';
+			el.innerHTML += '<img src="image/arrow-1.png" onclick = "clickFunction()">';
+			$('.toast').addClass('jump');
+		}
+
+		function clickFunction(){
+			document.getElementById('screen1').style.display = 'none';
+			document.getElementById('jumping-toast').style.opacity = '0';
+			document.getElementById('screen2').style.top = '0em';
+		}
+
+
+		function avo(){
+			var el = document.getElementById('smile-toast');
+			el.innerHTML = '<img src="image/toast-avo.png">';
+			var next = document.getElementById('dressing-choices');
+			next.innerHTML += '<img src="image/arrow-1.png" onclick = "lastFunction()">';
+		}
+
+		function peanut(){
+			var el = document.getElementById('smile-toast');
+			el.innerHTML = '<img src="image/toast-peanut.png">';
+			var next = document.getElementById('dressing-choices');
+			next.innerHTML += '<img src="image/arrow-1.png" onclick = "lastFunction()">';
+		}
+
+		function cheese(){
+			var el = document.getElementById('smile-toast');
+			el.innerHTML = '<img src="image/toast-cheese.png">';
+			var next = document.getElementById('dressing-choices');
+			next.innerHTML += '<img src="image/arrow-1.png" onclick = "lastFunction()">';
+		}
+
+
+		function lastFunction(){
+			$('#tomato').css('opacity','0');
+			$('#banana').css('opacity','0');
+			$('#egg').css('opacity','0');
+			document.getElementById('screen3').style.top = '0em';
+			document.getElementById('dressing-choices').style.opacity = '0';
+			document.getElementById('dressing-choices').style.zIndex = '-1111';
+		}
+
+		function tomato(){
+			$('#tomato').css('opacity','1');
+			$('#banana').css('opacity','0');
+			$('#egg').css('opacity','0');
+		}
+
+		$('.topping li').one('click', function(){
+			var share = document.getElementById('topping-choices');
+			share.innerHTML += '<p>Made for a tasty bright morning by Eva Wang</p>';
+			share.innerHTML += '<h3 onclick = "freshpage()">Try again</h3>';
+			});
+
+		function banana(){
+			$('#banana').css('opacity','1');
+			$('#tomato').css('opacity','0');
+			$('#egg').css('opacity','0');
+		}
+
+		function egg(){
+			$('#egg').css('opacity','1');
+			$('#tomato').css('opacity','0');
+			$('#banana').css('opacity','0');
+		}
+
+		function freshpage(){
+			window.location.reload();
+		}
+
+	</script>
+
+
+	
+</body>
+</html>
